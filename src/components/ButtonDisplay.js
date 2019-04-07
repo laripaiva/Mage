@@ -6,6 +6,7 @@ import {
   Image,
   TouchableHighlight
 } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 import NavigationService from '../config/navigationService';
 
@@ -28,8 +29,8 @@ export default props => {
   return (
     <TouchableHighlight onPress={() => NavigationService.navigate(props.route)}>
       <View>
-        <Text style={styles.button} />
-        {/* <Icon.Button name="facebook" onPress={this.loginWithFacebook} solid /> */}
+        <Text style={styles.button}>Ola mundo </Text>
+        <Icon name="facebook" color="white" type="font-awesome" />
       </View>
     </TouchableHighlight>
   );
