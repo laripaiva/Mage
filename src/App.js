@@ -1,60 +1,47 @@
-import React, { Component } from "react";
-import { Text, View, Image, Button, StyleSheet } from "react-native";
+import React, { Component } from 'react';
+import { Text, View, Image, Button, StyleSheet } from 'react-native';
 
-import { createAppContainer, createStackNavigator } from "react-navigation";
-import NavigationService from "./config/navigationService";
-import Home from "./Home";
-import Teste from "./Teste";
-import CatalogoProdutos from "./CatalogoProdutos";
-import CatalogoProdutores from "./CatalogoProdutores";
+import { createAppContainer, createStackNavigator } from 'react-navigation';
+import NavigationService from './config/navigationService';
+import Home from './Home';
+import Teste from './Teste';
+import CatalogoProdutos from './CatalogoProdutos';
+import CatalogoProdutores from './CatalogoProdutores';
 
-const RootStack = createStackNavigator({
-  Home: {
-    screen: Home,
-    navigationOptions: ({ navigation }) => ({
-      header: null
-    })
+const RootStack = createStackNavigator(
+  {
+    Home: {
+      screen: Home,
+      navigationOptions: ({ navigation }) => ({
+        header: null
+      })
+    },
+    CatalogoProdutos: {
+      screen: CatalogoProdutos,
+      navigationOptions: ({ navigation }) => ({
+        headerTitle: 'Catálogo de Produtos'
+      })
+    },
+    CatalogoProdutores: {
+      screen: CatalogoProdutores,
+      navigationOptions: ({ navigation }) => ({
+        headerTitle: 'Catálogo de Produtores'
+      })
+    }
   },
-  CatalogoProdutos: {
-    screen: CatalogoProdutos,
-    navigationOptions: ({ navigation }) => ({
-      headerTitle: "Catálogo de Produtos",
+  {
+    defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "#3E8022"
+        backgroundColor: '#3E8022'
       },
+      headerTintColor: '#FFF',
       headerTitleStyle: {
-        color: "#fff",
-        justifyContent: "center"
+        color: '#fff',
+        justifyContent: 'center'
       }
-    })
-  },
-  CatalogoProdutores: {
-    screen: CatalogoProdutores,
-    navigationOptions: ({ navigation }) => ({
-      headerTitle: "Catálogo de Produtores",
-      headerStyle: {
-        backgroundColor: "#3E8022"
-      },
-      headerTitleStyle: {
-        color: "#fff",
-        justifyContent: "center"
-      }
-    })
+    }
   }
-  // Teste: {
-  //   screen: Teste,
-  //   navigationOptions: ({ navigation }) => ({
-  //     headerTitle: "Sobre",
-  //     headerStyle: {
-  //       backgroundColor: "#3E8022"
-  //     },
-  //     headerTitleStyle: {
-  //       color: "#fff",
-  //       align: "center"
-  //     }
-  //   })
-  // }
-});
+);
 
 const Container = createAppContainer(RootStack);
 
