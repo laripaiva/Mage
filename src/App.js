@@ -7,6 +7,7 @@ import Home from './Home';
 import Teste from './Teste';
 import CatalogoProdutos from './CatalogoProdutos';
 import CatalogoProdutores from './CatalogoProdutores';
+import MapScreen from './Map';
 
 const RootStack = createStackNavigator(
   {
@@ -27,9 +28,13 @@ const RootStack = createStackNavigator(
       navigationOptions: ({ navigation }) => ({
         headerTitle: 'Catálogo de Produtores'
       })
+    },
+    Map: {
+      screen: MapScreen
     }
   },
   {
+    initialRouteName: 'Map',
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#3E8022'
