@@ -41,6 +41,19 @@ const RootStack = createStackNavigator({
       }
     })
   }
+  // Teste: {
+  //   screen: Teste,
+  //   navigationOptions: ({ navigation }) => ({
+  //     headerTitle: "Sobre",
+  //     headerStyle: {
+  //       backgroundColor: "#3E8022"
+  //     },
+  //     headerTitleStyle: {
+  //       color: "#fff",
+  //       align: "center"
+  //     }
+  //   })
+  // }
 });
 
 const Container = createAppContainer(RootStack);

@@ -1,23 +1,28 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button } from 'react-native';
-import DisplayLogo from './components/DisplayLogo';
-import ButtonDisplay from './components/ButtonDisplay';
-import Images from './components/Images';
+import React, { Component } from "react";
+import { Platform, StyleSheet, Text, View, Image, Button } from "react-native";
+import DisplayLogo from "./components/DisplayLogo";
+import ButtonDisplay from "./components/ButtonDisplay";
+import Images from "./components/Images";
 
 export default class Home extends Component {
   render() {
-    console.log('Home: ');
+    console.log("Home: ");
     console.log(this.props);
-    console.log('------');
+    console.log("------");
     return (
       <View style={styles.container}>
         <DisplayLogo />
-        <ButtonDisplay label="Catálogo de Produtos" route="CatalogoProdutos" />
+        <ButtonDisplay
+          label="Catálogo de Produtos"
+          route="CatalogoProdutos"
+          icon="leaf"
+        />
         <ButtonDisplay
           label="Catálogo de Produtores"
           route="CatalogoProdutores"
+          icon="user"
         />
-        <ButtonDisplay label="Sobre" route="Teste" />
+        <ButtonDisplay label="Sobre" route="Teste" icon="info-circle" />
         <Text style={styles.displayText}> Desenvolvedores: </Text>
         <Images />
       </View>
@@ -28,23 +33,23 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3E8022'
+    backgroundColor: "#3E8022"
   },
   displayText: {
     fontSize: 20,
-    color: '#fff',
-    textAlign: 'center',
+    color: "#fff",
+    textAlign: "center",
     marginTop: 10
   },
   buttons: {
-    justifyContent: 'center',
+    justifyContent: "center",
     borderBottomWidth: 1,
-    borderColor: '#2f601a',
-    backgroundColor: '#f5f5f5',
-    textAlign: 'left',
+    borderColor: "#2f601a",
+    backgroundColor: "#f5f5f5",
+    textAlign: "left",
     padding: 38,
     fontSize: 20,
-    color: '#fff'
+    color: "#fff"
   }
 });
 

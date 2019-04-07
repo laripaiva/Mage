@@ -1,39 +1,39 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   View,
   Text,
   Image,
   TouchableHighlight
-} from 'react-native';
-import { Icon } from 'react-native-elements';
+} from "react-native";
+import { Icon } from "react-native-elements";
 
-import NavigationService from '../config/navigationService';
+import NavigationService from "../config/navigationService";
 
 //Estilo do componente
 const styles = StyleSheet.create({
   button: {
-    flexDirection: 'row',
+    flexDirection: "row",
     borderBottomWidth: 1,
-    borderColor: '#2f601a',
-    padding: 10
+    borderColor: "#2f601a",
+    padding: 15
   },
   direction: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: "row"
   },
   text: {
     fontSize: 20,
-    color: '#fff',
+    color: "#fff",
     marginLeft: 10
   },
   icon: {
-    backgroundColor: 'red'
+    backgroundColor: "red"
   }
 });
 
 export default props => {
-  console.log('Display: ');
+  console.log("Display: ");
   console.log(props);
   return (
     <TouchableHighlight
@@ -43,9 +43,9 @@ export default props => {
       <View style={styles.direction}>
         <Icon
           style={styles.icon}
-          name={props.icon || 'skull'}
+          name={props.icon || "info-circle"}
           color="white"
-          type="material-community"
+          type="font-awesome"
         />
         <Text style={styles.text}>{props.label}</Text>
       </View>

@@ -1,8 +1,21 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 export default props => (
+  // <ScrollView>
+  //   <View>
+  //     <Text style={styles.text}>vai se fude</Text>
+  //   </View>
+  // </ScrollView>
   <View>
-    <Text>vai se fude</Text>
+    <Text style={styles.text}>vai se fude</Text>
   </View>
 );
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 120,
+    color: "#fff",
+    marginLeft: 10
+  }
+});
