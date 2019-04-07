@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Dimensions, StyleSheet } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -20,6 +20,8 @@ export default props => (
       // Workaround para showMyLocationButton
       // Ver: Issue #2010
       // TODO: Pq não criar showMyLocationButton manualmente?
-    />
+    >
+      <Marker coordinate={{ latitude: -22.89859, longitude: -43.187299 }} />
+    </MapView>
   </View>
 );

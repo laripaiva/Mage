@@ -7,7 +7,7 @@ import Home from './Home';
 import Teste from './Teste';
 import CatalogoProdutos from './CatalogoProdutos';
 import CatalogoProdutores from './CatalogoProdutores';
-import MapScreen from './Map';
+import MapScreen from './MapScreen';
 
 const RootStack = createStackNavigator(
   {
