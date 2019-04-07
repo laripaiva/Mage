@@ -5,8 +5,8 @@ import { createAppContainer, createStackNavigator } from "react-navigation";
 import NavigationService from "./config/navigationService";
 import Home from "./Home";
 import Teste from "./Teste";
-import Teste from "./CatalogoProdutos";
-import Teste from "./CatalogoProdutores";
+import CatalogoProdutos from "./CatalogoProdutos";
+import CatalogoProdutores from "./CatalogoProdutores";
 
 const RootStack = createStackNavigator({
   Home: {
