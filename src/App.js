@@ -8,6 +8,7 @@ import Teste from './Teste';
 import CatalogoProdutos from './CatalogoProdutos';
 import CatalogoProdutores from './CatalogoProdutores';
 import MapScreen from './MapScreen';
+import RequestScreen from './RequestScreen';
 
 const RootStack = createStackNavigator(
   {
@@ -31,10 +32,13 @@ const RootStack = createStackNavigator(
     },
     Map: {
       screen: MapScreen
+    },
+    RequestScreen: {
+      screen: RequestScreen
     }
   },
   {
-    initialRouteName: 'Map',
+    initialRouteName: 'RequestScreen',
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#3E8022'
