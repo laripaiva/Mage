@@ -21,7 +21,10 @@ export default props => (
       // Ver: Issue #2010
       // TODO: Pq não criar showMyLocationButton manualmente?
     >
-      <Marker coordinate={{ latitude: -22.89859, longitude: -43.187299 }} />
+      <Marker
+        pinColor="#3E8022"
+        coordinate={{ latitude: -22.89859, longitude: -43.187299 }}
+      />
     </MapView>
   </View>
 );
