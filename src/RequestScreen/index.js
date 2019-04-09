@@ -7,7 +7,6 @@ export default props => {
   const [api, updateApi] = useState('API should appear here!');
 
   useEffect(() => {
-    alert('Hi!');
     axios
       .get(URL, { headers: { Accept: 'application/json' } })
       .then(data => {
