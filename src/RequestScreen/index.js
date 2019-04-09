@@ -7,6 +7,7 @@ export default props => {
   const [api, updateApi] = useState('API should appear here!');
 
   useEffect(() => {
+    alert('Hi!');
     axios
       .get(URL, { headers: { Accept: 'application/json' } })
       .then(data => {
@@ -18,7 +19,7 @@ export default props => {
   }, []);
   return (
     <View>
-      <Text>{api}</Text>
+      <Text>{JSON.stringify(api)}</Text>
     </View>
   );
 };
