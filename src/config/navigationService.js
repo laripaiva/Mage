@@ -1,4 +1,6 @@
-import { NavigationActions } from "react-navigation";
+//Aquela parada para mudar de tela em qualquer lugar do app.
+
+import { NavigationActions } from 'react-navigation';
 
 let navigator;
 
