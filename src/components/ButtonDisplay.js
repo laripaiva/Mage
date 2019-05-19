@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  TouchableHighlight
-} from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
 
 import NavigationService from "../config/navigationService";
@@ -36,7 +30,7 @@ export default props => {
   console.log("Display: ");
   console.log(props);
   return (
-    <TouchableHighlight
+    <TouchableOpacity
       style={styles.button}
       onPress={() => NavigationService.navigate(props.route)}
     >
@@ -49,6 +43,6 @@ export default props => {
         />
         <Text style={styles.text}>{props.label}</Text>
       </View>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };

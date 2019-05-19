@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import { Text, View, Image, Button, StyleSheet } from 'react-native';
+import React, { Component } from "react";
+import { Text, View, Image, Button, StyleSheet } from "react-native";
 
-import { createAppContainer, createStackNavigator } from 'react-navigation';
-import NavigationService from './config/navigationService';
-import Home from './Home';
-import Teste from './Teste';
-import CatalogoProdutos from './CatalogoProdutos';
-import CatalogoProdutores from './CatalogoProdutores';
+import { createAppContainer, createStackNavigator } from "react-navigation";
+import NavigationService from "./config/navigationService";
+import Home from "./Home";
+import Teste from "./Teste";
+import Sobre from "./Sobre";
+import CatalogoProdutos from "./CatalogoProdutos";
+import CatalogoProdutores from "./CatalogoProdutores";
 
 const RootStack = createStackNavigator(
   {
@@ -19,25 +20,37 @@ const RootStack = createStackNavigator(
     CatalogoProdutos: {
       screen: CatalogoProdutos,
       navigationOptions: ({ navigation }) => ({
-        headerTitle: 'Catálogo de Produtos'
+        headerTitle: "Catálogo de Produtos"
       })
     },
     CatalogoProdutores: {
       screen: CatalogoProdutores,
       navigationOptions: ({ navigation }) => ({
-        headerTitle: 'Catálogo de Produtores'
+        headerTitle: "Catálogo de Produtores"
+      })
+    },
+    Teste: {
+      screen: Teste,
+      navigationOptions: ({ navigation }) => ({
+        headerTitle: "Magé AgroFamiliar"
+      })
+    },
+    Sobre: {
+      screen: Sobre,
+      navigationOptions: ({ navigation }) => ({
+        headerTitle: "Sobre"
       })
     }
   },
   {
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#3E8022'
+        backgroundColor: "#3E8022"
       },
-      headerTintColor: '#FFF',
+      headerTintColor: "#FFF",
       headerTitleStyle: {
-        color: '#fff',
-        justifyContent: 'center'
+        color: "#fff",
+        justifyContent: "center"
       }
     }
   }

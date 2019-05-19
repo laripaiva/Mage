@@ -22,7 +22,7 @@ export default class Home extends Component {
           route="CatalogoProdutores"
           icon="user"
         />
-        <ButtonDisplay label="Sobre" route="Teste" icon="info-circle" />
+        <ButtonDisplay label="Sobre" route="Sobre" icon="info-circle" />
         <Text style={styles.displayText}> Desenvolvedores: </Text>
         <Images />
       </View>
